@@ -63,10 +63,10 @@ export default function App() {
       <h2 className="title">Memories 📸</h2>
 
       <div className="memory-grid">
-        <img src="/mello1.jpg" />
-        <img src="/mello2.jpg" />
-        <img src="/mello3.jpeg" />
-        <img src="/mello4.jpeg" />
+        <img src={`${import.meta.env.BASE_URL}mello1.jpg`} />
+        <img src={`${import.meta.env.BASE_URL}mello2.jpg`} />
+        <img src={`${import.meta.env.BASE_URL}mello3.jpeg`}/>
+        <img src={`${import.meta.env.BASE_URL}mello4.jpeg`} />
       </div>
 
       </section>

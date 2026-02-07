@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Caveat:wght@500;700&family=Nunito:wght@400;600&display=swap');
+
+:root {
+  --red: #B22A2A;
+  --burgundy: #7A1F2B;
+  --cream: #FFF5E8;
+  --pink: #F6D6D6;
+  --ink: #3A2A2A;
+}
+
+/* base */
+body {
+  margin: 0;
+  background: var(--cream);
+  font-family: 'Nunito', sans-serif;
+  color: var(--ink);
+}
+
+/* postcard container */
+.postcard {
+  max-width: 1100px;
+  margin: 60px auto;
+  background: white;
+  border: 14px solid var(--red);
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* subtle paper grain */
+.postcard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#00000008 1px, transparent 1px);
+  background-size: 18px 18px;
+  pointer-events: none;
+}
+
+/* headings */
+.title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 48px;
+  color: var(--red);
+  letter-spacing: 2px;
+}
+
+/* handwritten text */
+.handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  color: var(--burgundy);
+}
+
+/* two-column layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* input lines */
+.line {
+  border-bottom: 2px dashed var(--pink);
+  padding: 10px 0;
+  margin: 20px 0;
+}
+
+/* stamps */
+.stamp {
+  background: var(--pink);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* button */
+.btn {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* tiny hearts */
+.heart {
+  position: absolute;
+  font-size: 18px;
+  color: var(--pink);
+  animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
